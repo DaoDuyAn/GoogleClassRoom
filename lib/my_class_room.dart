@@ -5,17 +5,15 @@ class MyClassRoom extends StatelessWidget {
   MyClassRoom({super.key});
 
   List<ClassItem> lstClassItem = [
-    ClassItem(subject: "Lập trình di động", semester: "2023.2024.1.TIN3001.001", lecturer: "Nguyễn Dũng", image: "assets/anh1.jpg", letter: "L", bgc: Colors.green),
-    ClassItem(subject: "Java Nâng cao", semester: "2023.2024.1.TIN3002.002", lecturer: "Nguyễn Hoàng Hà", image: "assets/anh2.jpg", letter: "J", bgc: Colors.grey),
-    ClassItem(subject: "Xây dựng ứng dụng với .NET Framework", semester: "2023.2024.1.TIN3003.003", lecturer: "Nguyễn Dũng", image: "assets/anh3.jpg", letter: "X", bgc: Colors.blueAccent),
-    ClassItem(subject: "Trí tuệ nhân tạo", semester: "2023.2024.1.TIN3004.004", lecturer: "Nguyễn Ngọc Thủy", image: "assets/anh4.jpg", letter: "T", bgc: Colors.black45),
-    ClassItem(subject: "CTDL & GT", semester: "2023.2024.1.TIN3005.005", lecturer: "Nguyễn Đức Nhuận", image: "assets/anh5.jpg", letter: "C", bgc: Colors.blue),
-    ClassItem(subject: "Xác suất thống kê", semester: "2023.2024.1.TIN3006.006", lecturer: "Trần Thiện Thành", image: "assets/anh6.jpg", letter: "X", bgc: Colors.deepOrangeAccent),
-    ClassItem(subject: "Cơ sở toán", semester: "2023.2024.1.TIN3007.007", lecturer: "Bùi Văn Chiến", image: "assets/anh3.jpg", letter: "C", bgc: Colors.blueAccent),
-    ClassItem(subject: "Anh văn chuyên ngành", semester: "2023.2024.1.TIN3008.008", lecturer: "Lê Thị Ngọc Lan", image: "assets/anh4.jpg", letter: "A", bgc: Colors.grey),
+    ClassItem(subject: "Lập trình di động", semester: "2023.2024.1.TIN3001.001", lecturer: "Nguyễn Dũng", image: "assets/anh1.jpg", bgc: Colors.green),
+    ClassItem(subject: "Java Nâng cao", semester: "2023.2024.1.TIN3002.002", lecturer: "Nguyễn Hoàng Hà", image: "assets/anh2.jpg", bgc: Colors.grey),
+    ClassItem(subject: "Xây dựng ứng dụng với .NET Framework", semester: "2023.2024.1.TIN3003.003", lecturer: "Nguyễn Dũng", image: "assets/anh3.jpg", bgc: Colors.blueAccent),
+    ClassItem(subject: "Trí tuệ nhân tạo", semester: "2023.2024.1.TIN3004.004", lecturer: "Nguyễn Ngọc Thủy", image: "assets/anh4.jpg", bgc: Colors.black45),
+    ClassItem(subject: "CTDL & GT", semester: "2023.2024.1.TIN3005.005", lecturer: "Nguyễn Đức Nhuận", image: "assets/anh5.jpg", bgc: Colors.blue),
+    ClassItem(subject: "Xác suất thống kê", semester: "2023.2024.1.TIN3006.006", lecturer: "Trần Thiện Thành", image: "assets/anh6.jpg", bgc: Colors.deepOrangeAccent),
+    ClassItem(subject: "Cơ sở toán", semester: "2023.2024.1.TIN3007.007", lecturer: "Bùi Văn Chiến", image: "assets/anh3.jpg", bgc: Colors.blueAccent),
+    ClassItem(subject: "Anh văn chuyên ngành", semester: "2023.2024.1.TIN3008.008", lecturer: "Lê Thị Ngọc Lan", image: "assets/anh4.jpg", bgc: Colors.grey),
   ];
-
-  List<String> lstTopic = ["KH", "DS", "AM", "HH", "LQuan", "HUHUHAHA", "dfgh", "dfg"];
 
   @override
   Widget build(BuildContext context) {
@@ -626,7 +624,7 @@ class MyClassRoom extends StatelessWidget {
                           backgroundColor: item.bgc,
                           radius: 12,
                           child: Text(
-                            item.letter,
+                            item.subject[0],
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.white,
@@ -778,7 +776,6 @@ class ClassItem {
   late String semester;
   late String lecturer;
   late String image;
-  late String letter;
   late Color bgc;
 
   ClassItem({
@@ -786,7 +783,6 @@ class ClassItem {
     required this.semester,
     required this.lecturer,
     required this.image,
-    required this.letter,
     required this.bgc,
   });
 }
