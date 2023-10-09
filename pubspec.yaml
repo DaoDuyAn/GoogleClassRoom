@@ -62,14 +62,16 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+#  assets:
+#    - assets/anh1.jpg
+#    - assets/anh2.jpg
+#    - assets/anh3.jpg
+#    - assets/anh4.jpg
+#    - assets/anh5.jpg
+#    - assets/anh6.jpg
+#    - assets/google_img.jpg
   assets:
-    - assets/anh1.jpg
-    - assets/anh2.jpg
-    - assets/anh3.jpg
-    - assets/anh4.jpg
-    - assets/anh5.jpg
-    - assets/anh6.jpg
-    - assets/google_img.jpg
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -96,3 +98,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: DancingScript
+      fonts:
+        - asset: assets/fonts/DancingScript-Regular.ttf
+          style: normal
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+

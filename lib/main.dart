@@ -20,9 +20,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) { // Tạo ra giao diện cho Widget
     return MaterialApp(
       title: "App Nhóm 3", // MyGGClassRoom
-      home: MyClassRoom(),
-      // home: MyHomePage(),
-      debugShowCheckedModeBanner: false, // tắt nhãn Debug
+      // home: MyClassRoom(),
+      home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'Lobster'
+      ),// tắt nhãn Debug
     );
   }
 }

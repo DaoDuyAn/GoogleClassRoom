@@ -5,14 +5,14 @@ class MyClassRoom extends StatelessWidget {
   MyClassRoom({super.key});
 
   List<ClassItem> lstClassItem = [
-    ClassItem(subject: "Lập trình di động", semester: "2023.2024.1.TIN3001.001", lecturer: "Nguyễn Dũng", image: "assets/anh1.jpg", bgc: Colors.green),
-    ClassItem(subject: "Java Nâng cao", semester: "2023.2024.1.TIN3002.002", lecturer: "Nguyễn Hoàng Hà", image: "assets/anh2.jpg", bgc: Colors.grey),
-    ClassItem(subject: "Xây dựng ứng dụng với .NET Framework", semester: "2023.2024.1.TIN3003.003", lecturer: "Nguyễn Dũng", image: "assets/anh3.jpg", bgc: Colors.blueAccent),
-    ClassItem(subject: "Trí tuệ nhân tạo", semester: "2023.2024.1.TIN3004.004", lecturer: "Nguyễn Ngọc Thủy", image: "assets/anh4.jpg", bgc: Colors.black45),
-    ClassItem(subject: "CTDL & GT", semester: "2023.2024.1.TIN3005.005", lecturer: "Nguyễn Đức Nhuận", image: "assets/anh5.jpg", bgc: Colors.blue),
-    ClassItem(subject: "Xác suất thống kê", semester: "2023.2024.1.TIN3006.006", lecturer: "Trần Thiện Thành", image: "assets/anh6.jpg", bgc: Colors.deepOrangeAccent),
-    ClassItem(subject: "Cơ sở toán", semester: "2023.2024.1.TIN3007.007", lecturer: "Bùi Văn Chiến", image: "assets/anh3.jpg", bgc: Colors.blueAccent),
-    ClassItem(subject: "Anh văn chuyên ngành", semester: "2023.2024.1.TIN3008.008", lecturer: "Lê Thị Ngọc Lan", image: "assets/anh4.jpg", bgc: Colors.grey),
+    ClassItem(subject: "Lập trình di động", semester: "2023.2024.1.TIN3001.001", lecturer: "Nguyễn Dũng", image: "assets/images/anh1.jpg", bgc: Colors.green),
+    ClassItem(subject: "Java Nâng cao", semester: "2023.2024.1.TIN3002.002", lecturer: "Nguyễn Hoàng Hà", image: "assets/images/anh2.jpg", bgc: Colors.grey),
+    ClassItem(subject: "Xây dựng ứng dụng với .NET Framework", semester: "2023.2024.1.TIN3003.003", lecturer: "Nguyễn Dũng", image: "assets/images/anh3.jpg", bgc: Colors.blueAccent),
+    ClassItem(subject: "Trí tuệ nhân tạo", semester: "2023.2024.1.TIN3004.004", lecturer: "Nguyễn Ngọc Thủy", image: "assets/images/anh4.jpg", bgc: Colors.black45),
+    ClassItem(subject: "CTDL & GT", semester: "2023.2024.1.TIN3005.005", lecturer: "Nguyễn Đức Nhuận", image: "assets/images/anh5.jpg", bgc: Colors.blue),
+    ClassItem(subject: "Xác suất thống kê", semester: "2023.2024.1.TIN3006.006", lecturer: "Trần Thiện Thành", image: "assets/images/anh6.jpg", bgc: Colors.deepOrangeAccent),
+    ClassItem(subject: "Cơ sở toán", semester: "2023.2024.1.TIN3007.007", lecturer: "Bùi Văn Chiến", image: "assets/images/anh3.jpg", bgc: Colors.blueAccent),
+    ClassItem(subject: "Anh văn chuyên ngành", semester: "2023.2024.1.TIN3008.008", lecturer: "Lê Thị Ngọc Lan", image: "assets/images/anh4.jpg", bgc: Colors.grey),
   ];
 
   @override
@@ -564,7 +564,7 @@ class MyClassRoom extends StatelessWidget {
                 child: Row(
                   children: [
                     Image(
-                      image: AssetImage('assets/google_img.jpg'),
+                      image: AssetImage('assets/images/google_img.jpg'),
                       height: 120,
                       width: 121,
                       fit: BoxFit.cover,
