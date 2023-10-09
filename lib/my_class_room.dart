@@ -385,20 +385,64 @@ class MyClassRoom extends StatelessWidget {
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                PopupMenuButton(
-                                  icon: Icon(
-                                    Icons.more_horiz_rounded,
-                                    color: Colors.white,
-                                  ),
-                                  itemBuilder: (context) {
-                                    List<String> lstMenuItem = ["Hủy đăng ký"];
+                                IconButton(
+                                    onPressed: () {
+                                      showModalBottomSheet<void>(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return Container(
+                                            height: 60,
+                                            color: Colors.white,
+                                            child: Center(
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  GestureDetector(
+                                                    onTap: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Container(
+                                                      padding: const EdgeInsets.all(15),
+                                                      child: Row(
+                                                        children: [
+                                                          Text(
+                                                            "Hủy đăng ký",
+                                                            style: TextStyle(
+                                                              color: Colors.black,
+                                                              fontSize: 16,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ),
 
-                                    var lstItem =  lstMenuItem.map((e) {
-                                      return PopupMenuItem(child: Text(e));
-                                    }).toList();
-                                    return lstItem;
-                                  },
-                                )
+                                                ],
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      );
+                                    },
+                                    icon: Icon(
+                                      Icons.more_horiz_rounded,
+                                      color: Colors.white,
+                                    )
+                                ),
+                                // PopupMenuButton(
+                                //   icon: Icon(
+                                //     Icons.more_horiz_rounded,
+                                //     color: Colors.white,
+                                //   ),
+                                //   itemBuilder: (context) {
+                                //     List<String> lstMenuItem = ["Hủy đăng ký"];
+                                //
+                                //     var lstItem =  lstMenuItem.map((e) {
+                                //       return PopupMenuItem(child: Text(e));
+                                //     }).toList();
+                                //     return lstItem;
+                                //   },
+                                // )
                               ],
                           ),
                         ),
