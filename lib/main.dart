@@ -1,5 +1,6 @@
 import 'package:di_dong/my_class_room.dart';
 import 'package:di_dong/my_home_page.dart';
+import 'package:di_dong/my_instagram.dart';
 
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "App Nhóm 3", // MyGGClassRoom
       // home: MyClassRoom(),
-      home: MyHomePage(),
+      home: MyInstagram(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Lobster'
