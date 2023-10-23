@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+// import 'package:cached_network_image/cached_network_image.dart';
 
 import 'model/product.dart';
 
@@ -9,7 +11,7 @@ class MyAlbum extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Danh sách hình ảnh"),
+        title: Text("Danh sách sản phẩm"),
       ),
       body: FutureBuilder<List<Product>>(
         future: Product.fetchData(),
@@ -46,15 +48,56 @@ class MyProduct extends StatelessWidget {
         // itemCount: 2,
         itemBuilder: (context, index) {
           var product = lstProduct[index];
+          // return Column(
+          //   children: [
+          //     Expanded(child: Image.network(product.image)),
+          //     Text(product.title),
+          //
+          //   ],
+          // );
+          return CachedNetworkImage(
+              imageUrl: product?.image??"",
+              imageBuilder: (context, imageProvider) {
+                return Column(
+                      children: [
+                        Expanded(child: Image(
+                          image: imageProvider,
+                          fit: BoxFit.cover,
+                        )),
+                        Text(product.title),
 
-          return Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(product?.image??""),
-                fit: BoxFit.cover,
-              )
-            ),
+                      ],
+                    );
+              },
+              placeholder: (context, url) {
+                return Container(
+                  child: Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              }
           );
+          // return CachedNetworkImage(
+          //   imageUrl: product?.image??"",
+          //   imageBuilder: (context, imageProvider) {
+          //     return Container(
+          //       decoration: BoxDecoration(
+          //           image: DecorationImage(
+          //             image: imageProvider,
+          //             fit: BoxFit.cover,
+          //           )
+          //       ),
+          //       //child: Text(product.title),
+          //     );
+          //   },
+          //   placeholder: (context, url) {
+          //     return Container(
+          //       child: Center(
+          //         child: CircularProgressIndicator(),
+          //       ),
+          //     );
+          //   }
+          // );
         },
     );
   }

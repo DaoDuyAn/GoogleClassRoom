@@ -95,7 +95,7 @@ class Rating {
 //   static Future<List<Photo>> fetchData() async{
 //     var apiUrl = 'https://jsonplaceholder.typicode.com/photos';
 //     var response=  await http.get(Uri.parse(apiUrl));
-//     if ( response.statusCode == 200) {
+//     if (response.statusCode == 200) {
 //       var body = response.body;
 //       var json = jsonDecode(body);
 //
