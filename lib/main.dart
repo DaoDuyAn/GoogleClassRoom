@@ -1,16 +1,18 @@
 import 'package:di_dong/my_class_room.dart';
 import 'package:di_dong/my_home_page.dart';
 import 'package:di_dong/my_instagram.dart';
+import 'package:di_dong/my_album.dart';
 
 import 'package:flutter/material.dart';
 
 
 
 void main() {
-  // Cach 1:
+  // Cách 1:
   // var myApp = new MyApp();
   // runApp(myApp);
 
+  // Cách 2:
   runApp(MyApp());
 }
 
@@ -22,7 +24,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "App Nhóm 3", // MyGGClassRoom
       // home: MyClassRoom(),
-      home: MyInstagram(),
+      // home: MyInstagram(),
+      home: MyAlbum(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Lobster'
