@@ -75,7 +75,7 @@ class MyClassRoom extends StatelessWidget {
                                       child: Image(
                                         height: 120,
                                         width: 130,
-                                        image: AssetImage('assets/google_img.jpg'),
+                                        image: AssetImage('assets/images/google_img.jpg'),
                                         fit: BoxFit.cover,
                                       ),
                                     )

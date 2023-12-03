@@ -63,8 +63,12 @@ class MyProduct extends StatelessWidget {
                         Expanded(child: Image(
                           image: imageProvider,
                           fit: BoxFit.cover,
+                          height: 60,
                         )),
-                        Text(product.title),
+                        Text(
+                            product.title,
+                            overflow: TextOverflow.ellipsis,
+                        ),
 
                       ],
                     );
